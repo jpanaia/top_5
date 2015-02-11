@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="well">
+			<h2><%= @song.name %></h2>
+			<h3>by <%= @song.artist.name %></h3>
+			<% "#{@song.rating}".to_i.times do |rate| %>
+              <span class="glyphicon glyphicon-star"></span>
+            <% end %>
+			 <%#= rating_for @song, "song" %> 
+			<h4><%= link_to edit_song_path(@song) do %>
+              <span class="fa fa-pencil-square-o"></span>
+          <% end %></h4>
+		</div>
+	</div>
+</div>
+
+
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
