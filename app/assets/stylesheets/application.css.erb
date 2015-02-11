@@ -81,7 +81,13 @@ input[type="text"], input[type="number"]{
 
 .well {
 	background: rgba(0,0,0,0.4);
+  /*background: url(<%#= asset_path @artist.avatar.url %>);*/
 }
+
+.well img {
+  border-radius: 100px;
+}
+
 
 h3 {
 	font-weight: 100;
